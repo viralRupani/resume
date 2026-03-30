@@ -7,25 +7,29 @@
 
 body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    font-size: 11pt; /* Standard readable size */
+    font-size: 11pt;
     line-height: 1.5;
-    color: #333;
-    background-color: #f5f5f5; /* Grey background for web view */
+    color: #222;
+    background-color: #f4f4f4;
     display: flex;
     justify-content: center;
-    padding: 40px;
+    padding: 40px 0;
 }
 
-/* PAPER FORMATTING (A4) */
+/* ============================= */
+/* A4 CONTAINER */
+/* ============================= */
 .resume-container {
-    width: 210mm; /* A4 Width */
-    min-height: 297mm; /* A4 Height */
-    background: white;
-    padding: 20px 35px; /* Generous margins for readability */
-    box-shadow: 0 0 15px rgba(0,0,0,0.1);
+    width: 210mm;
+    min-height: 297mm;
+    background: #fff;
+    padding: 24px 36px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
 }
 
+/* ============================= */
 /* LINKS */
+/* ============================= */
 a {
     color: #000;
     text-decoration: none;
@@ -34,56 +38,70 @@ a {
 /* HEADER SECTION */
 header {
     text-align: center;
-    margin-bottom: 25px;
-    border-bottom: 2px solid #333;
-    padding-bottom: 15px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #222;
+    padding-bottom: 12px;
 }
 
 h1 {
     font-size: 24pt;
+    font-weight: 700;
     text-transform: uppercase;
     letter-spacing: 1px;
-    font-weight: 700;
-    margin-bottom: 5px;
 }
 
 .role-title {
     display: flex;
     justify-self: center;
     font-size: 12pt;
-    margin-bottom: 5px;
+    margin-top: 4px;
+    margin: auto !important;
 }
 
 .contact-info {
     font-size: 10pt;
-    margin-top: 5px;
+    margin-top: 6px;
+    line-height: 1.4;
 }
 
-.contact-info span {
-    margin: 0 5px;
-}
-
+/* ============================= */
 /* SECTIONS */
+/* ============================= */
 section {
-    margin-bottom: 20px;
+    margin-bottom: 18px;
 }
 
 h2 {
     font-size: 12pt;
     text-transform: uppercase;
+    font-weight: 700;
     border-bottom: 1px solid #ccc;
     padding-bottom: 3px;
-    margin-bottom: 12px;
-    font-weight: 700;
+    margin-bottom: 10px;
     letter-spacing: 0.5px;
 }
 
-/* CONTENT BLOCKS */
+/* ============================= */
+/* TEXT */
+/* ============================= */
+p {
+    margin-bottom: 8px;
+    text-align: justify;
+    line-height: 1.6;
+}
+
+/* ============================= */
+/* JOB / EXPERIENCE */
+/* ============================= */
+.company-block {
+    margin-bottom: 14px;
+}
+
 .job-header {
     display: flex;
     justify-content: space-between;
     align-items: baseline;
-    margin-bottom: 2px;
+    margin-bottom: 4px;
 }
 
 .job-title {
@@ -100,63 +118,62 @@ h2 {
     font-size: 10pt;
     font-style: italic;
     text-align: right;
-    min-width: 150px;
 }
 
-.company-block {
-    margin-bottom: 15px;
-}
-
-.education-details {
-    font-size: 11pt;
-}
-
-p {
-    margin-bottom: 8px;
-    text-align: justify;
-}
-
-/* BULLET POINTS */
+/* ============================= */
+/* BULLETS */
+/* ============================= */
 ul {
-    list-style-type: disc;
-    margin-left: 20px; /* Standard indentation */
-    margin-bottom: 10px;
+    margin-left: 18px;
+    margin-top: 6px;
 }
 
 li {
-    margin-bottom: 3px; /* Breathing room between bullets */
-    padding-left: 5px;
+    margin-bottom: 5px;
+    padding-left: 4px;
 }
 
-/* SKILLS SECTION */
+/* ============================= */
+/* SKILLS */
+/* ============================= */
 .skills-grid {
     display: grid;
-    grid-template-columns: 140px 1fr;
-    gap: 5px;
-    margin-bottom: 5px;
+    grid-template-columns: 150px 1fr;
+    gap: 6px;
+    margin-bottom: 6px;
 }
 
 .skill-category {
     font-weight: 700;
 }
 
-/* PRINT MEDIA QUERY (Crucial for PDF Export) */
+/* ============================= */
+/* EDUCATION */
+/* ============================= */
+.education-details {
+    font-size: 11pt;
+    margin-top: 2px;
+}
+
+/* ============================= */
+/* PRINT SETTINGS */
+/* ============================= */
 @media print {
     body {
-        background: white;
+        background: #fff;
         padding: 0;
         display: block;
     }
-    
+
     .resume-container {
-        box-shadow: none;
         width: 100%;
         margin: 0;
-        padding: 0; /* Let the printer margins handle it */
+        padding: 0;
+        box-shadow: none;
     }
-    
+
     @page {
-        margin: 0.5in 0.6in; /* Set margins here for the PDF */
         size: A4;
+        margin: 0.5in 0.6in;
     }
 }
