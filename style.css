@@ -21,7 +21,7 @@ body {
     width: 210mm; /* A4 Width */
     min-height: 297mm; /* A4 Height */
     background: white;
-    padding: 40px 50px; /* Generous margins for readability */
+    padding: 20px 35px; /* Generous margins for readability */
     box-shadow: 0 0 15px rgba(0,0,0,0.1);
 }
 
